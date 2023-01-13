@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Rubik Vinyl', cursive;
+    width: 100%;
+    height: 100vh;
+    background: #200122;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+}
+
+main>h1,
+main>h2,
+main>h3,
+main>h4 {
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+main>h4 {
+    font-size: 3rem;
+    animation: h4 linear 0s 10s forwards;
+}
+
+main>h4>a {
+    color: inherit;
+}
+
+main>h1,
+main>h2,
+main>h3,
+main>h4 {
+
+    animation: anime 5s linear forwards;
+}
+
+main>h1 {
+    animation-delay: 5s;
+}
+
+main>h2 {
+    animation-delay: 10s;
+}
+
+main>h3 {
+    animation-delay: 15s;
+}
+
+@keyframes anime {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        filter: blur(20px);
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3);
+        filter: blur(50px);
+    }
+}
+
+@keyframes h4 {
+    to {
+        opacity: 1;
+    }
+}
